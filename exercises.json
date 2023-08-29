@@ -2,7 +2,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Butt Kickers",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 30,
     "repetition": 1,
@@ -11,7 +11,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Clamshells",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 30,
     "repetition": 2,
@@ -20,7 +20,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "High Kicks",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -29,7 +29,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Curls",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 60,
     "repetition": 3,
@@ -38,7 +38,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Calf Stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
@@ -47,7 +47,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Calf Lifts",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 30,
     "repetition": 3,
@@ -56,7 +56,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Bird bops",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
@@ -65,7 +65,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Normal Pushups",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -74,7 +74,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Butterfly Stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -83,7 +83,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Groin flex",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -92,7 +92,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Bridge",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Null",
     "default_time": 20,
     "repetition": 1,
@@ -101,7 +101,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "One foot bridge",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 15,
     "repetition": 1,
@@ -110,7 +110,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Diagonal backward fondas",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 25,
     "repetition": 2,
@@ -119,7 +119,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Situps",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
@@ -128,7 +128,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Incline Pushups",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -137,7 +137,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Band Walk",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
@@ -146,7 +146,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Straight Plank",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 55,
     "repetition": 1,
@@ -155,7 +155,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Side Plank",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
@@ -164,7 +164,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Leg circles",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 10,
     "repetition": 4,
@@ -173,7 +173,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Roller on the back",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
@@ -182,7 +182,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Legs crossed stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
@@ -191,7 +191,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Ninja stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
@@ -200,7 +200,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Squats",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
@@ -209,7 +209,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Quad Stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
@@ -218,7 +218,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Narrow Pushups",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
@@ -227,7 +227,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Skaters",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 30,
     "repetition": 1,
@@ -236,7 +236,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Pullups",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 60,
     "repetition": 1,
@@ -245,7 +245,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Roller on the groin",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
@@ -254,7 +254,7 @@
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Lacrosse Ball on the groin",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
@@ -263,7 +263,7 @@
   {
     "date_added": "2017-01-16 00:00:00",
     "name": "Half Roller Squats",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Both",
     "default_time": 35,
     "repetition": 2,
@@ -272,7 +272,7 @@
   {
     "date_added": "2017-01-16 00:00:00",
     "name": "Back curls",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 30,
     "repetition": 3,
@@ -281,7 +281,7 @@
   {
     "date_added": "2017-01-17 21:05:28",
     "name": "Roller on the glutes",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -290,7 +290,7 @@
   {
     "date_added": "2017-01-26 22:00:00",
     "name": "Warrior 2",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 30,
     "repetition": 2,
@@ -299,7 +299,7 @@
   {
     "date_added": "2017-01-31 00:00:00",
     "name": "Hamstring stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
@@ -308,7 +308,7 @@
   {
     "date_added": "2017-02-12 00:00:00",
     "name": "Knee to chest stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
@@ -317,7 +317,7 @@
   {
     "date_added": "2017-03-06 00:00:00",
     "name": "Squat hold",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
@@ -326,7 +326,7 @@
   {
     "date_added": "2017-03-06 00:00:00",
     "name": "Dips",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 30,
     "repetition": 2,
@@ -335,7 +335,7 @@
   {
     "date_added": "2017-03-06 00:00:00",
     "name": "Bicycle crunches",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
@@ -344,7 +344,7 @@
   {
     "date_added": "2017-03-06 00:00:00",
     "name": "Mountain climbers",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
@@ -353,7 +353,7 @@
   {
     "date_added": "2017-03-06 00:00:00",
     "name": "Lunges",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Null",
     "default_time": 60,
     "repetition": 1,
@@ -362,7 +362,7 @@
   {
     "date_added": "2017-03-14 00:00:00",
     "name": "Hand roller on the groin",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
@@ -371,7 +371,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Inner thigh roll",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -380,7 +380,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Lacrosse ball on hip",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -389,7 +389,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Hamstring Roller",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -398,7 +398,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Lacrosse ball on upper knee",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -407,7 +407,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Lacrosse ball behind knee",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
@@ -416,7 +416,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Roller on the quad",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 120,
     "repetition": 1,
@@ -425,7 +425,7 @@
   {
     "date_added": "2018-10-11 00:00:00",
     "name": "Lacrosse ball on glutes",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -434,7 +434,7 @@
   {
     "date_added": "2018-12-20 00:00:00",
     "name": "Calf roller",
-    "category_id": 4,
+    "category_id": "rolling",
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
@@ -443,7 +443,7 @@
   {
     "date_added": "2019-12-27 00:00:00",
     "name": "Groin Squeeze",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Null",
     "default_time": 65,
     "repetition": 3,
@@ -452,7 +452,7 @@
   {
     "date_added": "2019-12-27 00:00:00",
     "name": "Hip mobility",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 60,
     "repetition": 2,
@@ -461,7 +461,7 @@
   {
     "date_added": "2019-12-27 00:00:00",
     "name": "Glute raises",
-    "category_id": 1,
+    "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 100,
     "repetition": 2,
@@ -470,7 +470,7 @@
   {
     "date_added": "2020-01-01 00:00:00",
     "name": "Glute stretch",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
@@ -479,7 +479,7 @@
   {
     "date_added": "2020-01-01 00:00:00",
     "name": "1 legged squats",
-    "category_id": 3,
+    "category_id": "strength",
     "side": "Both",
     "default_time": 50,
     "repetition": 3,
@@ -488,7 +488,7 @@
   {
     "date_added": "2019-01-06 00:00:00",
     "name": "Ottoman step ups",
-    "category_id": 2,
+    "category_id": "stretch",
     "side": "Both",
     "default_time": 60,
     "repetition": 3,

@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "name": "physical_therapy",
+      "weight": 0.20
+    },
+    {
+      "name": "stretch",
+      "weight": 0.25
+    },
+    {
+      "name": "strength",
+      "weight": 0.60
+    },
+    {
+      "name": "rolling",
+      "weight": 0.20
+    }
+  ],
+
+  "whitelist": []
+}

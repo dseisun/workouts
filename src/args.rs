@@ -4,5 +4,5 @@ use clap::Parser;
 pub struct Cli {
     ///Time in minutes to work out for
     #[arg(short, long)]
-    pub time: u8
+    pub minutes: u16
 }
