@@ -17,7 +17,7 @@ use clap::Parser;
 // Once generated I need to be able to hand it to something to be run (method on itself?), and then be logged (method on itself?)
 
 fn main() {
-    //TODO: If you pick a really short time with many configs it still picks 1 of each that fits within the time. Are you okay with this behaviour
+    //TODO: If you pick a really short time with many configs it still picks 1 of each that fits within the time. Are you okay with this behaviour?
     let cli = Cli::parse();
     
     let workout = generate_workout(cli.minutes, ConfigPath::default(), ExercisePath::default());

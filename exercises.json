@@ -6,7 +6,8 @@
     "side": "Both",
     "default_time": 30,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": "Running in place while kicking your butt"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -15,7 +16,8 @@
     "side": "Both",
     "default_time": 30,
     "repetition": 2,
-    "prompt": "10 {name}. {side} side. Keep the knee in line"
+    "prompt": "10 {name}. {side} side. Keep the knee in line",
+    "long_desc": "Lay on your side and with a band around your knees open and close your knees"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -24,7 +26,8 @@
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": "Stand in place, and high kick to meet your opposite hand"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -33,7 +36,8 @@
     "side": "Null",
     "default_time": 60,
     "repetition": 3,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": "Normal bicep curls"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -42,7 +46,8 @@
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": "Do both upper and lower calf by bending the knee"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -51,7 +56,8 @@
     "side": "Null",
     "default_time": 30,
     "repetition": 3,
-    "prompt": "10 {name}"
+    "prompt": "10 {name}",
+    "long_desc": "Can be done just standing, but is better with an edge to keep only your toes on, like stairs"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -60,16 +66,18 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": "AKA the drinking bird. Keep your back straight, stand on one leg, and bend down until your back is perpendicular to your leg. You can keep your arms either straight out above your head, or carry a weight in one or both of them"
   },
   {
     "date_added": "2017-01-12 19:34:08",
-    "name": "Normal Pushups",
+    "name": "20 normal Pushups",
     "category_id": "strength",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -78,7 +86,8 @@
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": "Sit in butterfly position and push knees down towards the ground"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -87,34 +96,38 @@
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. 10 reps of 5 seconds"
+    "prompt": "{name}. 10 reps of 5 seconds",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Bridge",
     "category_id": "physical_therapy",
     "side": "Null",
-    "default_time": 20,
+    "default_time": 30,
     "repetition": 1,
-    "prompt": "{name}. 10 reps"
+    "prompt": "{name}. 5 reps",
+    "long_desc": "Bridge and hold for 5 seconds"
   },
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "One foot bridge",
     "category_id": "physical_therapy",
     "side": "Both",
-    "default_time": 15,
+    "default_time": 30,
     "repetition": 1,
-    "prompt": "{name}. {side} side. 10 reps"
+    "prompt": "{name}. {side} side. 5 reps",
+    "long_desc": "Bridge and hold on one leg for 5 seconds"
   },
   {
     "date_added": "2017-01-12 19:34:08",
     "name": "Diagonal backward fondas",
     "category_id": "physical_therapy",
     "side": "Both",
-    "default_time": 25,
+    "default_time": 30,
     "repetition": 2,
-    "prompt": "{name}. {side} side. 10 reps"
+    "prompt": "{name}. {side} side. 10 reps",
+    "long_desc": "Lay on your side and move your leg up and backwards"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -123,16 +136,18 @@
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
-    "prompt": "{name}. 50 reps"
+    "prompt": "{name}. 50 reps",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
-    "name": "Incline Pushups",
+    "name": "20 incline Pushups",
     "category_id": "strength",
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -141,7 +156,8 @@
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": "Side to side shuffle with a band around your knees"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -150,7 +166,8 @@
     "side": "Null",
     "default_time": 55,
     "repetition": 1,
-    "prompt": "{name}. 50 seconds"
+    "prompt": "{name}. 50 seconds",
+    "long_desc": "Plank on elbows or arms"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -159,7 +176,8 @@
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
-    "prompt": "{name}. {side} side. 50 seconds"
+    "prompt": "{name}. {side} side. 50 seconds",
+    "long_desc": "Plank on elbows or arms"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -168,7 +186,8 @@
     "side": "Both",
     "default_time": 10,
     "repetition": 4,
-    "prompt": "{name}. {side} side. Switch direction every other one"
+    "prompt": "{name}. {side} side. Switch direction every other one",
+    "long_desc": "Lay on your side and put your leg in circles. Don't use your ankle"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -177,7 +196,8 @@
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -186,7 +206,8 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -195,7 +216,8 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -204,7 +226,8 @@
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
-    "prompt": "15 {name}"
+    "prompt": "15 {name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -213,7 +236,8 @@
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
-    "prompt": "{name}. {side} side"
+    "prompt": "{name}. {side} side",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -222,7 +246,8 @@
     "side": "Null",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -231,7 +256,8 @@
     "side": "Both",
     "default_time": 30,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -240,7 +266,8 @@
     "side": "Null",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -249,7 +276,8 @@
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -258,7 +286,8 @@
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-16 00:00:00",
@@ -267,7 +296,8 @@
     "side": "Both",
     "default_time": 35,
     "repetition": 2,
-    "prompt": "{name}. {side} side"
+    "prompt": "{name}. {side} side",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-16 00:00:00",
@@ -276,7 +306,8 @@
     "side": "Null",
     "default_time": 30,
     "repetition": 3,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-17 21:05:28",
@@ -285,7 +316,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side"
+    "prompt": "{name}. {side} side",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-26 22:00:00",
@@ -294,7 +326,8 @@
     "side": "Both",
     "default_time": 30,
     "repetition": 2,
-    "prompt": "{name}. {side} side"
+    "prompt": "{name}. {side} side",
+    "long_desc": ""
   },
   {
     "date_added": "2017-01-31 00:00:00",
@@ -303,7 +336,8 @@
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-02-12 00:00:00",
@@ -312,7 +346,8 @@
     "side": "Both",
     "default_time": 40,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-06 00:00:00",
@@ -321,7 +356,8 @@
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
-    "prompt": "{name}. Take 10 seconds off in between."
+    "prompt": "{name}. Take 10 seconds off in between.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-06 00:00:00",
@@ -330,7 +366,8 @@
     "side": "Null",
     "default_time": 30,
     "repetition": 2,
-    "prompt": "{name}. 10 reps"
+    "prompt": "{name}. 10 reps",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-06 00:00:00",
@@ -339,7 +376,8 @@
     "side": "Null",
     "default_time": 80,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-06 00:00:00",
@@ -348,7 +386,8 @@
     "side": "Null",
     "default_time": 40,
     "repetition": 2,
-    "prompt": "10 {name} each side."
+    "prompt": "10 {name} each side.",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-06 00:00:00",
@@ -357,7 +396,8 @@
     "side": "Null",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}"
+    "prompt": "{name}",
+    "long_desc": ""
   },
   {
     "date_added": "2017-03-14 00:00:00",
@@ -366,7 +406,8 @@
     "side": "Both",
     "default_time": 55,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -375,7 +416,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -384,7 +426,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -393,7 +436,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -402,7 +446,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -411,7 +456,8 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -420,7 +466,8 @@
     "side": "Both",
     "default_time": 120,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-10-11 00:00:00",
@@ -429,7 +476,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side."
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   },
   {
     "date_added": "2018-12-20 00:00:00",
@@ -438,7 +486,8 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 1,
-    "prompt": "{name}. {side} side"
+    "prompt": "{name}. {side} side",
+    "long_desc": ""
   },
   {
     "date_added": "2019-12-27 00:00:00",
@@ -447,7 +496,8 @@
     "side": "Null",
     "default_time": 65,
     "repetition": 3,
-    "prompt": "Groin squeeze. 60 seconds. Get wider between each rep"
+    "prompt": "Groin squeeze. 60 seconds. Get wider between each rep",
+    "long_desc": ""
   },
   {
     "date_added": "2019-12-27 00:00:00",
@@ -456,7 +506,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 2,
-    "prompt": "{name}. Bend {side} side in. "
+    "prompt": "{name}. Bend {side} side in. ",
+    "long_desc": ""
   },
   {
     "date_added": "2019-12-27 00:00:00",
@@ -465,7 +516,8 @@
     "side": "Both",
     "default_time": 100,
     "repetition": 2,
-    "prompt": "{name}. {side} side. 10 reps"
+    "prompt": "{name}. {side} side. 10 reps",
+    "long_desc": ""
   },
   {
     "date_added": "2020-01-01 00:00:00",
@@ -474,7 +526,8 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "Plank {name}. {side} side. "
+    "prompt": "Plank {name}. {side} side. ",
+    "long_desc": ""
   },
   {
     "date_added": "2020-01-01 00:00:00",
@@ -483,7 +536,8 @@
     "side": "Both",
     "default_time": 50,
     "repetition": 3,
-    "prompt": "{name}. {side} side. 10 reps"
+    "prompt": "{name}. {side} side. 10 reps",
+    "long_desc": ""
   },
   {
     "date_added": "2019-01-06 00:00:00",
@@ -492,6 +546,7 @@
     "side": "Both",
     "default_time": 60,
     "repetition": 3,
-    "prompt": "{name}. {side} side. 10 reps"
+    "prompt": "{name}. {side} side. 10 reps",
+    "long_desc": ""
   }
 ]
