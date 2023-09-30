@@ -64,7 +64,8 @@ pub fn load_exercises_from_json(path: ExercisePath) -> Vec<Exercise> {
 pub struct Config {
     #[serde(rename = "categories")]
     pub category_config: Vec<CategoryConfig>,
-    pub whitelist: Vec<u8>
+    pub auto_include: Vec<String>,
+    pub omit: Vec<String>
 }
 
 impl Config {
@@ -123,7 +124,8 @@ fn test_sample_json_deserializes() {
           }
         ],
       
-        "whitelist": []
+        "auto_include": ["this is a test"],
+        "omit": []
       }"#;
 
       let t: Config = serde_json::from_str(&data).unwrap();
