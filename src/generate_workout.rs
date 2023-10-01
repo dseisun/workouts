@@ -1,23 +1,53 @@
-use crate::models::{load_exercises_from_json, load_config, CategoryConfig, Exercise, CategoryType, ConfigPath, ExercisePath};
+use crate::models::{load_exercises_from_json, load_config, CategoryConfig, Exercise, CategoryType, ConfigPath, ExercisePath, Config};
 use std::{collections::HashMap, ops::Deref, default};
 use rand::{thread_rng, seq::SliceRandom};
 
+//for input into a fill category
+pub struct HydratedCategoryConfig<'a> {
+    category: &'a CategoryType,
+    category_time_in_secs: u16,
+    category_exercises: &'a Vec<&'a Exercise>,
+    category_include: Vec<&'a Exercise>,
+    category_omit: Vec<&'a Exercise>
+}
 
 pub fn generate_workout(minutes: u16, config_path: ConfigPath, exercise_path: ExercisePath) -> Vec<Exercise> {
     //TODO: Set these as function params
     let total_secs = minutes as f32 * 60_f32;
     let exercises = load_exercises_from_json(exercise_path);
-    let exercise_category_map = generate_excercise_categories(exercises);
+    let exercise_category_map = generate_exercise_categories(&exercises);
     let conf = load_config(config_path);
 
     let mut workout: Vec<Exercise> = vec![];
 
+    //TODO Align include types to be either &str or String
+    let include = get_exercises_from_name(
+        conf.include.iter().map(AsRef::as_ref).collect::<Vec<&str>>(), 
+        &exercises);
+    
+    
+    let omit = get_exercises_from_name(
+        conf.omit.iter().map(AsRef::as_ref).collect::<Vec<&str>>(), 
+        &exercises);
 
+    // Add workouts for a given category
     for CategoryConfig{category, weight} in &conf.category_config {
         let pct_weight = weight / conf.total_weight() as f32;
         let category_time_secs = (pct_weight * total_secs) as u16;
-        let exercise_group = exercise_category_map.get(category).expect("Found no exercises for category type referenced in config");
-        let mut cat = fill_category(category_time_secs, exercise_group);
+        
+
+        let category_include: Vec<&Exercise> = include.iter().filter(|i| &i.category_id == category).cloned().collect();
+        let category_omit: Vec<&Exercise> = omit.iter().filter(|i| &i.category_id == category).cloned().collect();
+        
+        let hydrated_cat_config = HydratedCategoryConfig {
+            category: category,
+            category_time_in_secs: category_time_secs,
+            category_exercises: exercise_category_map.get(category).expect("Found no exercises for category type referenced in config"),
+            category_include: category_include,
+            category_omit: category_omit,
+        };
+
+        let mut cat = fill_category(&hydrated_cat_config);
         workout.append(&mut cat);
     }
     workout.shuffle(&mut thread_rng());
@@ -30,18 +60,46 @@ fn test_generate_workout() {
     let workout = generate_workout(1000, ConfigPath::default(), ExercisePath::default());
 }
 
-pub fn fill_category(time_in_seconds: u16, exercise_group: &Vec<Exercise>) -> Vec<Exercise> {
+fn get_exercise_from_name<'a>(name: &str, exercises: &'a Vec<Exercise>) -> &'a Exercise {
+    for e in exercises {
+        if e.name == name {
+            return &e
+        }
+    }
+    panic!("{}", format!("Tried to get exercise {} and couldn't find by name", name))
+}
+
+fn get_exercises_from_name<'a>(names: Vec<&str>, exercises: &'a Vec<Exercise>) -> Vec<&'a Exercise> {
+    let mut found_exercises = vec![];
+    for name in names {
+        found_exercises.push(get_exercise_from_name(name, exercises));
+    }
+    found_exercises
+}
+
+
+pub fn fill_category(hcc: &HydratedCategoryConfig) -> Vec<Exercise> {
+    // TODO implement include and omit functionality
     let mut workout_cat_exercises: Vec<Exercise> = vec![];
-    let mut time_remaining: i32 = time_in_seconds.into();
-    let mut rng = thread_rng();
-    let mut e = exercise_group.to_vec();
-    e.shuffle(&mut rng);
+    let mut time_remaining: i32 = hcc.category_time_in_secs.into();
     
+
+
+
+    for i in &hcc.category_include {
+        workout_cat_exercises.push((*i).clone());
+        // workout_cat_exercises.push(i.clone());
+        time_remaining = time_remaining - i.total_time() as i32
+    }
+
+
+    let mut e = hcc.category_exercises.to_vec();
+    e.shuffle(&mut thread_rng());
     while time_remaining > 0 { 
-        if e.is_empty() {e = exercise_group.to_vec();} //This is going to be a problem no?
+        if e.is_empty() {e = hcc.category_exercises.to_vec();} //Refill the pool of exercises if it gets empty
         let exc = e.pop().unwrap();
         time_remaining = time_remaining - exc.total_time() as i32;
-        workout_cat_exercises.push(exc);
+        workout_cat_exercises.push(exc.clone());
         
     }
     workout_cat_exercises
@@ -50,17 +108,56 @@ pub fn fill_category(time_in_seconds: u16, exercise_group: &Vec<Exercise>) -> Ve
 #[test]
 fn test_fill_category() {
     let exercises = load_exercises_from_json(Default::default());
-    let exercise_category_map = generate_excercise_categories(exercises);
-    fill_category(600, exercise_category_map.get(&CategoryType::PhysicalTherapy).unwrap());
+    let exercise_category_map = generate_exercise_categories(&exercises);
+    let hcc = HydratedCategoryConfig {
+        category: &CategoryType::PhysicalTherapy,
+        category_time_in_secs: 100,
+        category_exercises: exercise_category_map.get(&CategoryType::PhysicalTherapy).unwrap(),
+        category_include: vec![],
+        category_omit: vec![],
+    };
+    fill_category(&hcc);
 }
 
-pub fn generate_excercise_categories(exercises: Vec<Exercise>) -> HashMap<CategoryType, Vec<Exercise>> {
-    let mut exercise_category_map: HashMap<CategoryType, Vec<Exercise>> = HashMap::new();
+
+#[test]
+fn test_fill_category_with_include() {
+    let category = CategoryType::PhysicalTherapy;
+    let exercises = load_exercises_from_json(Default::default());
+    let exercise_category_map = generate_exercise_categories(&exercises);
+    let include = vec!["Clamshells", "Butt Kickers"];
+    let include_exercises = get_exercises_from_name(include, &exercises);
+    let category_include: Vec<&Exercise> = include_exercises.iter()
+        .filter(|i| i.category_id == category)
+        .cloned()
+        .collect();
+
+    let category_exercises = vec![];
+
+    let hcc = HydratedCategoryConfig {
+        category: &CategoryType::PhysicalTherapy,
+        category_time_in_secs: 100,
+        category_exercises: exercise_category_map.get(&CategoryType::PhysicalTherapy).unwrap(),
+        category_include: category_include,
+        category_omit: category_exercises,
+    };
+    
+    let cat_exercises = fill_category(&hcc);
+
+    for include_exercise in include_exercises {
+        if include_exercise.category_id == *hcc.category {
+            assert!(cat_exercises.contains(include_exercise), "{:?} not found in generated filled_category", include_exercise.name);
+        }
+    }
+}
+
+pub fn generate_exercise_categories(exercises: &Vec<Exercise>) -> HashMap<CategoryType, Vec<&Exercise>> {
+    let mut exercise_category_map: HashMap<CategoryType, Vec<&Exercise>> = HashMap::new();
 
 
     for exercise in exercises {
         // TODO: Explore using an actual set for the list of exercises? Or writing a test to check for duplicate ids
-        // TODO: Exercise description for whne you come back to this after a while
+        // TODO: Exercise description for when you come back to this after a while
         let cat_id = exercise_category_map.entry(exercise.category_id.clone());
         let cat_exercise_set = cat_id.or_insert(vec![]);
         cat_exercise_set.push(exercise);

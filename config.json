@@ -18,6 +18,6 @@
     }
   ],
 
-  "auto_include": [],
+  "include": ["Situps", "Roller on the back", "Curls", "20 normal Pushups"],
   "omit": []
 }

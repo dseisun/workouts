@@ -1,4 +1,6 @@
+// TODO Add general timer (since the time actually exercised can be off due to include listing and bin packing issues)
 // TODO: Deserialize a config into the objects you created in models.rs
+// TODO: Add more notification on how many reps you will do and what rep you're on
 // Use builder pattern for your workout obj: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
 // Or use default struct pattern
 
@@ -8,7 +10,7 @@ mod generate_workout;
 mod run_workout;
 mod tts;
 
-use crate::{args::Cli, models::{load_exercises_from_json, load_config, ConfigPath, ExercisePath}, generate_workout::{generate_excercise_categories, generate_workout}};
+use crate::{args::Cli, models::{load_exercises_from_json, load_config, ConfigPath, ExercisePath}, generate_workout::{generate_exercise_categories, generate_workout}};
 use clap::Parser;
 
 
@@ -26,5 +28,6 @@ fn main() {
     let cli = Cli::parse();
     
     let workout = generate_workout(cli.minutes, ConfigPath::default(), ExercisePath::default());
+    println!("{:?}", workout); //TODO Either prettify this or make it a debug logline
     run_workout::run_workout(workout);
 }

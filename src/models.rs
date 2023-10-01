@@ -2,7 +2,7 @@ use std::{io::BufReader, fs::File};
 
 use serde::{Serialize, Deserialize};
 
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Exercise {
     pub date_added: String,
     pub name: String,
@@ -64,7 +64,7 @@ pub fn load_exercises_from_json(path: ExercisePath) -> Vec<Exercise> {
 pub struct Config {
     #[serde(rename = "categories")]
     pub category_config: Vec<CategoryConfig>,
-    pub auto_include: Vec<String>,
+    pub include: Vec<String>,
     pub omit: Vec<String>
 }
 
@@ -124,7 +124,7 @@ fn test_sample_json_deserializes() {
           }
         ],
       
-        "auto_include": ["this is a test"],
+        "include": ["this is a test"],
         "omit": []
       }"#;
 

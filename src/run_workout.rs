@@ -40,20 +40,16 @@ fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
             std::thread::sleep(tick)
         } 
     };
-    if exercise.side == Side::Both {
-        run_exercise_side(&Side::Left, &exercise);
-        run_exercise_side(&Side::Right, &exercise)
+    for i in 0..exercise.repetition {
+        if exercise.side == Side::Both {
+            run_exercise_side(&Side::Left, &exercise);
+            run_exercise_side(&Side::Right, &exercise)}
+        else {run_exercise_side(&exercise.side, &exercise)}
     }
-    else {run_exercise_side(&exercise.side, &exercise)}
-
-    
-
-
 }
 
 #[test]
 fn test_running_exercise() {
     let exc = load_exercises_from_json(ExercisePath::default());
-    run_exercise(exc.first().unwrap(), &crate::tts::get_speaker());
-    
+    run_exercise(exc.first().unwrap(), &crate::tts::get_speaker())
 }
