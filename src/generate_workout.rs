@@ -151,6 +151,11 @@ fn test_fill_category_with_include() {
     }
 }
 
+//TODO implement omit
+fn test_fill_category_with_omit() {
+    
+}
+
 pub fn generate_exercise_categories(exercises: &Vec<Exercise>) -> HashMap<CategoryType, Vec<&Exercise>> {
     let mut exercise_category_map: HashMap<CategoryType, Vec<&Exercise>> = HashMap::new();
 

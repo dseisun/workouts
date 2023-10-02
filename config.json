@@ -18,6 +18,7 @@
     }
   ],
 
-  "include": ["Situps", "Roller on the back", "Curls", "20 normal Pushups"],
-  "omit": []
+  "include": ["Situps", "Roller on the back", "Curls", "20 normal Pushups", "Back curls"],
+  "omit": ["Butterfly Stretch", "Bridge", "One foot bridge", 
+  "Leg circles", "Pullups", "Half Roller Squats", "Warrior 2", "Squat hold", "Mountain climbers", "Lunges"]
 }

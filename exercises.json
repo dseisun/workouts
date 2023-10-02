@@ -91,16 +91,6 @@
   },
   {
     "date_added": "2017-01-12 19:34:08",
-    "name": "Groin flex",
-    "category_id": "physical_therapy",
-    "side": "Null",
-    "default_time": 50,
-    "repetition": 1,
-    "prompt": "{name}. 10 reps of 5 seconds",
-    "long_desc": ""
-  },
-  {
-    "date_added": "2017-01-12 19:34:08",
     "name": "Bridge",
     "category_id": "physical_therapy",
     "side": "Null",
@@ -251,13 +241,23 @@
   },
   {
     "date_added": "2017-01-12 19:34:08",
-    "name": "Skaters",
+    "name": "Band Skaters",
     "category_id": "physical_therapy",
     "side": "Both",
     "default_time": 30,
     "repetition": 1,
     "prompt": "{name}. {side} side.",
-    "long_desc": ""
+    "long_desc": "Band around ankles and move ankle back 45 degrees"
+  },
+    {
+    "date_added": "2017-01-12 19:34:08",
+    "name": "Skater jumps",
+    "category_id": "physical_therapy",
+    "side": "Null",
+    "default_time": 45,
+    "repetition": 1,
+    "prompt": "{name}. {side} side.",
+    "long_desc": "https://www.youtube.com/watch?v=JQUqVHxbYEw&ab_channel=ReactPhysicalTherapy"
   },
   {
     "date_added": "2017-01-12 19:34:08",
