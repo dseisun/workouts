@@ -79,11 +79,11 @@ fn get_exercises_from_name<'a>(names: Vec<&str>, exercises: &'a Vec<Exercise>) -
 
 
 pub fn fill_category(hcc: &HydratedCategoryConfig) -> Vec<Exercise> {
-    // TODO implement include and omit functionality
+    // TODO implement omit functionality
     let mut workout_cat_exercises: Vec<Exercise> = vec![];
     let mut time_remaining: i32 = hcc.category_time_in_secs.into();
-    
-
+    let r = hcc.category_exercises;
+    let t: &Vec<&Exercise> = hcc.category_exercises.iter().filter(|&&exc| !hcc.category_omit.contains(&exc)).cloned().collect();
 
 
     for i in &hcc.category_include {
@@ -132,14 +132,14 @@ fn test_fill_category_with_include() {
         .cloned()
         .collect();
 
-    let category_exercises = vec![];
+    let category_omit = vec![];
 
     let hcc = HydratedCategoryConfig {
         category: &CategoryType::PhysicalTherapy,
         category_time_in_secs: 100,
         category_exercises: exercise_category_map.get(&CategoryType::PhysicalTherapy).unwrap(),
         category_include: category_include,
-        category_omit: category_exercises,
+        category_omit,
     };
     
     let cat_exercises = fill_category(&hcc);
@@ -152,8 +152,34 @@ fn test_fill_category_with_include() {
 }
 
 //TODO implement omit
+#[test]
 fn test_fill_category_with_omit() {
+    let category = CategoryType::PhysicalTherapy;
+    let exercises = load_exercises_from_json(Default::default());
+    let exercise_category_map = generate_exercise_categories(&exercises);
+    let omit = vec!["Clamshells", "Butt Kickers"];
+    let omit_exercises = get_exercises_from_name(omit.clone(), &exercises);
+    let category_omit: Vec<&Exercise> = omit_exercises.iter()
+        .filter(|i| i.category_id == category)
+        .cloned()
+        .collect();
+
+    let category_include = vec![];
+
+    let hcc = HydratedCategoryConfig {
+        category: &CategoryType::PhysicalTherapy,
+        category_time_in_secs: 10000,
+        category_exercises: exercise_category_map.get(&CategoryType::PhysicalTherapy).unwrap(),
+        category_include: category_include,
+        category_omit: category_omit,
+    };
     
+    let cat_exercises = fill_category(&hcc);
+
+    for omit_exc in omit {
+        assert!(!cat_exercises.iter().any(|exc| omit_exc == &exc.name), "Found omitted exercise {}", omit_exc)
+    }
+
 }
 
 pub fn generate_exercise_categories(exercises: &Vec<Exercise>) -> HashMap<CategoryType, Vec<&Exercise>> {
