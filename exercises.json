@@ -548,5 +548,15 @@
     "repetition": 3,
     "prompt": "{name}. {side} side. 10 reps",
     "long_desc": ""
-  }
+  },
+  {
+    "date_added": "2023-010-04 00:00:00",
+    "name": "Dumbbell bench press",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 3,
+    "prompt": "{name}",
+    "long_desc": "Sitting on a bench use dumbbells to do a bench press"
+  } 
 ]

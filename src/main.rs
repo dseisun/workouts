@@ -1,6 +1,8 @@
 // TODO Add general timer (since the time actually exercised can be off due to include listing and bin packing issues)
 // TODO: Deserialize a config into the objects you created in models.rs
 // TODO: Add more notification on how many reps you will do and what rep you're on
+// TODO: Overall progress bar / timer
+// TODO: A "workout complete" narration
 // Use builder pattern for your workout obj: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
 // Or use default struct pattern
 
