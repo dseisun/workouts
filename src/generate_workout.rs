@@ -81,7 +81,6 @@ fn get_exercises_from_name<'a>(names: Vec<&str>, exercises: &'a Vec<Exercise>) -
 pub fn fill_category(hcc: &HydratedCategoryConfig) -> Vec<Exercise> {
     let mut workout_cat_exercises: Vec<Exercise> = vec![];
     let mut time_remaining: i32 = hcc.category_time_in_secs.into();
-    let r = hcc.category_exercises;
 
 
     for i in &hcc.category_include {
@@ -89,15 +88,12 @@ pub fn fill_category(hcc: &HydratedCategoryConfig) -> Vec<Exercise> {
         time_remaining = time_remaining - i.total_time() as i32
     }
 
-
-    let exc_with_omit = hcc.category_exercises.to_vec();
-
-    let mut e: Vec<&Exercise> = exc_with_omit.iter().filter(|&exc| 
-    !hcc.category_omit.iter().any(|e: &&Exercise| e.name == exc.name)).cloned().collect();
-    let mut remaining_exercises = e.to_vec();
+    let category_exercise_list: Vec<&Exercise> = hcc.category_exercises.iter().filter(|&exc| 
+        !hcc.category_omit.iter().any(|e: &&Exercise| e.name == exc.name)).cloned().collect();
+    let mut remaining_exercises = category_exercise_list.to_vec();
     remaining_exercises.shuffle(&mut thread_rng());
     while time_remaining > 0 { 
-        if remaining_exercises.is_empty() {remaining_exercises = e.to_vec();} //Refill the pool of exercises if it gets empty
+        if remaining_exercises.is_empty() {remaining_exercises = category_exercise_list.to_vec();} //Refill the pool of exercises if it gets empty
         let exc = remaining_exercises.pop().unwrap();
         time_remaining = time_remaining - exc.total_time() as i32;
         workout_cat_exercises.push(exc.clone());
@@ -152,7 +148,6 @@ fn test_fill_category_with_include() {
     }
 }
 
-//TODO implement omit
 #[test]
 fn test_fill_category_with_omit() {
     let category = CategoryType::PhysicalTherapy;

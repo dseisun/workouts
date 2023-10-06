@@ -28,9 +28,20 @@ impl Speak for NotImplSpeak {
         panic!("TTS not implemented for OS")
     }
 }
+pub(crate) struct TestSpeak;
+impl Speak for TestSpeak {
+    fn tts(&self, text: &str) {
+        println!("Would have said: {text}")
+    }
+}
 
 //TODO Write tests
+#[cfg(test)]
+pub(crate) fn get_speaker() -> Box<dyn Speak> {
+    Box::new(TestSpeak)
+}
 
+#[cfg(not(test))]
 pub(crate) fn get_speaker() -> Box<dyn Speak> {
     if cfg!(target_os = "macos") {
         Box::new(OSXSpeak)

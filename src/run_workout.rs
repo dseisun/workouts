@@ -4,10 +4,19 @@ use indicatif::{ProgressBar, ProgressStyle, ProgressIterator};
 use strfmt::strfmt;
 use crate::{models::{Exercise, ConfigPath, ExercisePath, Side, load_exercises_from_json}, generate_workout, tts::{OSXSpeak, Speak, NotImplSpeak}};
 
+//Mock out sleep for tests
+
+#[cfg(not(test))]
+use std::thread::sleep;
+
+#[cfg(test)]
+fn sleep(_dur: Duration) {}
+
 
 pub fn run_workout(workout: Vec<Exercise>) {
     
     let tts = crate::tts::get_speaker();
+
     for exercise in workout {
         run_exercise(&exercise, &tts);
     }
@@ -37,7 +46,7 @@ fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
             bar.set_message(format!("{} Time remaining: {time_remaining}", message));
             
             bar.inc(1);
-            std::thread::sleep(tick)
+            sleep(tick)
         } 
     };
     for i in 0..exercise.repetition {
