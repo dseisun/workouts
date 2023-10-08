@@ -20,15 +20,8 @@ pub fn generate_workout(minutes: u16, config_path: ConfigPath, exercise_path: Ex
 
     let mut workout: Vec<Exercise> = vec![];
 
-    //TODO Align include types to be either &str or String
-    let include = get_exercises_from_name(
-        conf.include.iter().map(AsRef::as_ref).collect::<Vec<&str>>(), 
-        &exercises);
-    
-    
-    let omit = get_exercises_from_name(
-        conf.omit.iter().map(AsRef::as_ref).collect::<Vec<&str>>(), 
-        &exercises);
+    let include = get_exercises_from_name(&conf.include, &exercises);
+    let omit = get_exercises_from_name(&conf.omit, &exercises);
 
     // Add workouts for a given category
     for CategoryConfig{category, weight} in &conf.category_config {
@@ -69,10 +62,10 @@ fn get_exercise_from_name<'a>(name: &str, exercises: &'a Vec<Exercise>) -> &'a E
     panic!("{}", format!("Tried to get exercise {} and couldn't find by name", name))
 }
 
-fn get_exercises_from_name<'a>(names: Vec<&str>, exercises: &'a Vec<Exercise>) -> Vec<&'a Exercise> {
+fn get_exercises_from_name<'a, T: AsRef<str>>(names: &Vec<T>, exercises: &'a Vec<Exercise>) -> Vec<&'a Exercise> {
     let mut found_exercises = vec![];
     for name in names {
-        found_exercises.push(get_exercise_from_name(name, exercises));
+        found_exercises.push(get_exercise_from_name(name.as_ref(), exercises));
     }
     found_exercises
 }
@@ -123,7 +116,7 @@ fn test_fill_category_with_include() {
     let exercises = load_exercises_from_json(Default::default());
     let exercise_category_map = generate_exercise_categories(&exercises);
     let include = vec!["Clamshells", "Butt Kickers"];
-    let include_exercises = get_exercises_from_name(include, &exercises);
+    let include_exercises = get_exercises_from_name(&include, &exercises);
     let category_include: Vec<&Exercise> = include_exercises.iter()
         .filter(|i| i.category_id == category)
         .cloned()
@@ -154,7 +147,7 @@ fn test_fill_category_with_omit() {
     let exercises = load_exercises_from_json(Default::default());
     let exercise_category_map = generate_exercise_categories(&exercises);
     let omit = vec!["Clamshells", "Butt Kickers"];
-    let omit_exercises = get_exercises_from_name(omit.clone(), &exercises);
+    let omit_exercises = get_exercises_from_name(&omit.clone(), &exercises);
     let category_omit: Vec<&Exercise> = omit_exercises.iter()
         .filter(|i| i.category_id == category)
         .cloned()
