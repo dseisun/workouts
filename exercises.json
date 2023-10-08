@@ -3,10 +3,10 @@
     "date_added": "2017-01-12 19:34:08",
     "name": "Butt Kickers",
     "category_id": "physical_therapy",
-    "side": "Both",
-    "default_time": 30,
+    "side": "Null",
+    "default_time": 60,
     "repetition": 1,
-    "prompt": "{name}. {side} side.",
+    "prompt": "{name}",
     "long_desc": "Running in place while kicking your butt"
   },
   {
@@ -558,5 +558,35 @@
     "repetition": 3,
     "prompt": "{name}",
     "long_desc": "Sitting on a bench use dumbbells to do a bench press"
-  } 
+  },
+  {
+    "date_added": "2023-010-04 00:00:00",
+    "name": "Downward dog",
+    "category_id": "stretch",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 1,
+    "prompt": "{name}",
+    "long_desc": "5 seconds downward dog to yoga push up pose"
+  },
+  {
+    "date_added": "2023-010-04 00:00:00",
+    "name": "Up downs",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 1,
+    "prompt": "{name}",
+    "long_desc": "Go from arm extended plank pose, to plank on elbows and back"
+  },
+  {
+    "date_added": "2023-010-04 00:00:00",
+    "name": "Ladder",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 2,
+    "prompt": "{name}. 2 reps",
+    "long_desc": "Roll out the ladder and run 1-2 patterns on it"
+  }
 ]

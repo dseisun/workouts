@@ -4,7 +4,7 @@ use indicatif::{ProgressBar, ProgressStyle, ProgressIterator};
 use strfmt::strfmt;
 use crate::{models::{Exercise, ConfigPath, ExercisePath, Side, load_exercises_from_json}, generate_workout, tts::{OSXSpeak, Speak, NotImplSpeak}};
 
-//Mock out sleep for tests
+
 
 #[cfg(not(test))]
 use std::thread::sleep;
@@ -31,6 +31,7 @@ fn test_running_workout() {
 }
 
 fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
+    //TODO: Show next exercise in the progress par (or println)
     //Using closure to capture the speaker ref
     let run_exercise_side = |side: &Side, excercise: &Exercise| {
         let style = ProgressStyle::with_template("{spinner} {elapsed} {percent}% {msg} {bar:40.cyan/blue}")
