@@ -521,13 +521,13 @@
   },
   {
     "date_added": "2020-01-01 00:00:00",
-    "name": "Glute stretch",
+    "name": "Supine glute stretch",
     "category_id": "stretch",
     "side": "Both",
     "default_time": 60,
     "repetition": 1,
-    "prompt": "Plank {name}. {side} side. ",
-    "long_desc": ""
+    "prompt": "{name}. {side} side",
+    "long_desc": "Lay on back and place right foot ankle on left knee and grab behind the knee. https://www.sweat.com/blogs/fitness/glute-stretches"
   },
   {
     "date_added": "2020-01-01 00:00:00",

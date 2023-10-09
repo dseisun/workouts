@@ -177,7 +177,6 @@ pub fn generate_exercise_categories(exercises: &Vec<Exercise>) -> HashMap<Catego
 
     for exercise in exercises {
         // TODO: Explore using an actual set for the list of exercises? Or writing a test to check for duplicate ids
-        // TODO: Exercise description for when you come back to this after a while
         let cat_id = exercise_category_map.entry(exercise.category_id.clone());
         let cat_exercise_set = cat_id.or_insert(vec![]);
         cat_exercise_set.push(exercise);
