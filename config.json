@@ -21,5 +21,6 @@
   "include": ["Situps", "Roller on the back", "Curls", "20 normal Pushups", "Back curls", "Dumbbell bench press", "Roller on the quad",
   "Lacrosse ball behind knee","Ninja stretch"],
   "omit": ["Butterfly Stretch", "Bridge", "One foot bridge", 
-  "Leg circles", "Pullups", "Half Roller Squats", "Warrior 2", "Squat hold", "Mountain climbers", "Lunges"]
+  "Leg circles", "Pullups", "Half Roller Squats", "Warrior 2", "Squat hold", "Mountain climbers", 
+  "Lunges", "1 legged squats"]
 }
