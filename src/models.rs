@@ -10,7 +10,8 @@ pub struct Exercise {
     pub side: Side,
     pub default_time: u16,
     pub repetition: u16,
-    pub prompt: String
+    pub prompt: String,
+    pub long_desc: String,
 }
 
 impl Exercise {
@@ -92,6 +93,9 @@ pub struct CategoryConfig {
     pub weight: f32
 }
 
+//TODO - Switch category type from enum back to a string
+// Benefits are ability to easily add new category types, and you benefit almost nothing from the type safety
+// A specific feature you want is to be able to create a new custom category type
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq, Hash)]
 #[serde(rename_all = "snake_case")]
 pub enum CategoryType {

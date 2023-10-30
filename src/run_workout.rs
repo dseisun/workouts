@@ -45,6 +45,7 @@ fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
         let tick = Duration::from_secs(1);
         
         println!("{}", message);
+        println!("{}", exercise.long_desc);
         speaker.tts(&message);
         
         for secs_elapsed in 0..exercise.default_time {

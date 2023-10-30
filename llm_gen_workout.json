@@ -1,0 +1,90 @@
+[
+    {
+        "date_added": "2023-10-26 11:05:00",
+        "name": "Marching in Place",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 60,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "Stand upright and march in place, lifting your knees as high as comfortably possible."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:10:00",
+        "name": "Step Touches",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 60,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "Step to the side with one foot and then bring the other foot to meet it, tapping the floor lightly."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:15:00",
+        "name": "Arm Swings",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 45,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "Stand with feet shoulder-width apart. Swing arms forward and up, then swing them back and down in a rhythmic motion."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:20:00",
+        "name": "Shuffle Steps",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 45,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "Take a small step to the side, followed by a quick 'shuffle' step with the other foot to meet the first. Alternate sides."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:25:00",
+        "name": "Standing Oblique Crunches",
+        "category_id": "stretch",
+        "side": "Both",
+        "default_time": 45,
+        "repetition": 2,
+        "prompt": "{name}. {side} side.",
+        "long_desc": "Stand with feet shoulder-width apart. Place hands behind the head and bring the elbow towards the same side's knee. Return to starting position and repeat on the other side."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:30:00",
+        "name": "Modified Jumping Jacks",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 60,
+        "repetition": 1,
+        "prompt": "{name}",
+        "long_desc": "Start with feet together. Step one foot out to the side and raise arms overhead. Step foot back in and lower arms. Repeat on the other side."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:35:00",
+        "name": "Torso Twists",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 45,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "Stand with feet hip-width apart. Twist the torso to one side, then the other, keeping feet planted."
+        },
+        
+        {
+        "date_added": "2023-10-26 11:40:00",
+        "name": "Heel Taps",
+        "category_id": "stretch",
+        "side": "Null",
+        "default_time": 45,
+        "repetition": 2,
+        "prompt": "{name}",
+        "long_desc": "While standing, bend one knee and tap the heel in front of you, then switch to the other leg in a rhythmic manner."
+        }
+        
+]    

@@ -9,7 +9,7 @@ mod generate_workout;
 mod run_workout;
 mod tts;
 
-use crate::{args::Cli, models::{ConfigPath, ExercisePath}, generate_workout::generate_workout};
+use crate::{args::Cli, models::{ConfigPath, ExercisePath, load_exercises_from_json}, generate_workout::generate_workout};
 use clap::Parser;
 use std::time::SystemTime;
 
@@ -26,7 +26,7 @@ fn main() {
     //TODO: If you pick a really short time with many configs it still picks 1 of each that fits within the time. Are you okay with this behaviour?
     let cli = Cli::parse();
     
-    let workout = generate_workout(cli.minutes, ConfigPath::default(), ExercisePath::default());
+    let workout = load_exercises_from_json(ExercisePath { path: String::from("/Users/danielseisun/workspace/workout/llm_gen_workout.json") });
     println!("{:?}", workout); //TODO Either prettify this or make it a debug logline
     run_workout::run_workout(workout);
     let workout_duration = SystemTime::now().duration_since(start).unwrap();
