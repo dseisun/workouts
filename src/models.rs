@@ -2,6 +2,8 @@ use std::{io::BufReader, fs::File};
 
 use serde::{Serialize, Deserialize};
 
+use crate::args::{unwrap_or_default_config, unwrap_or_default_exercises};
+
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Exercise {
     pub date_added: String,
@@ -42,20 +44,15 @@ impl ToString for Side {
 
 #[test]
 fn test_loading_exercises() {
-    let exc = load_exercises_from_json(Default::default());
+    let exc = load_exercises_from_json(unwrap_or_default_exercises(None));
     assert_eq!(exc.first().unwrap().name, "Butt Kickers")
 }
 
 
-pub struct ExercisePath {pub path: String}
-impl Default for ExercisePath {
-    fn default() -> Self {
-        Self { path: String::from("/Users/danielseisun/workspace/workout/exercises.json")}
-    }
-}
 
-pub fn load_exercises_from_json(path: ExercisePath) -> Vec<Exercise> {
-    let exc_json = std::fs::read_to_string(path.path).unwrap();
+//TODO: Make this take a proper Path instead of a string
+pub fn load_exercises_from_json(path: String) -> Vec<Exercise> {
+    let exc_json = std::fs::read_to_string(path).unwrap();
     serde_json::from_str(&exc_json).unwrap()
 }
 
@@ -82,7 +79,7 @@ impl Config {
 
 #[test]
 fn test_total_weight() {
-  let config = load_config(Default::default());
+  let config = load_config(unwrap_or_default_config(None));
   dbg!(config.total_weight());
 }
 
@@ -136,24 +133,61 @@ fn test_sample_json_deserializes() {
 }
 
 
-pub struct ConfigPath {
-  path: String
-}
 
-
-
-impl Default for ConfigPath {
-    fn default() -> Self {
-        Self { path: String::from("/Users/danielseisun/workspace/workout/config.json")}
-    }
-}
-
-pub fn load_config(config_path: ConfigPath) -> Config {
-  let raw_config = std::fs::read_to_string(config_path.path).unwrap();
+//TODO: Make this take a proper Path instead of a string
+pub fn load_config(config_path: String) -> Config {
+  let raw_config = std::fs::read_to_string(config_path).unwrap();
   serde_json::from_str(&raw_config).unwrap()
 }
 
 #[test]
 fn test_default_load_config() {
-  load_config(Default::default());
+  load_config(unwrap_or_default_config(None));
+}
+
+
+pub enum ConfigPath {
+  None,
+  Some(String)
+}
+
+impl ConfigPath {
+    pub fn unwrap_or_default(self) -> String {
+      match self {
+        ConfigPath::None => String::from("/Users/danielseisun/workspace/workout/config.json"),
+        ConfigPath::Some(p) => p
+      }
+    }
+}
+
+pub enum WorkoutPath {
+  None,
+  Some(String)
+}
+
+impl WorkoutPath {
+  fn unwrap_or_default(self) -> String {
+    match self {
+      WorkoutPath::None => String::from("/Users/danielseisun/workspace/workout/exercises.json"),
+      WorkoutPath::Some(p) => p
+    }
+  }
+}
+
+impl Into<ConfigPath> for Option<String> {
+  fn into(self) -> ConfigPath {
+      match self {
+          None => ConfigPath::None,
+          Some(t) => ConfigPath::Some(t)
+      }
+  }
+}
+
+impl Into<WorkoutPath> for Option<String> {
+  fn into(self) -> WorkoutPath {
+      match self {
+          None => WorkoutPath::None,
+          Some(t) => WorkoutPath::Some(t)
+      }
+  }
 }

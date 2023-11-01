@@ -1,4 +1,4 @@
-use crate::models::{load_exercises_from_json, load_config, CategoryConfig, Exercise, CategoryType, ConfigPath, ExercisePath, Config};
+use crate::{models::{load_exercises_from_json, load_config, CategoryConfig, Exercise, CategoryType, ConfigPath}, args::{GenerateParams, unwrap_or_default_config, unwrap_or_default_exercises}};
 use std::{collections::HashMap, ops::Deref, default};
 use rand::{thread_rng, seq::SliceRandom};
 
@@ -11,10 +11,16 @@ pub struct HydratedCategoryConfig<'a> {
     category_omit: Vec<&'a Exercise>
 }
 
-pub fn generate_workout(minutes: u16, config_path: ConfigPath, exercise_path: ExercisePath) -> Vec<Exercise> {
+pub fn generate_workout(generate_params: GenerateParams) -> Vec<Exercise> {
+    let minutes = generate_params.minutes;
+    let config_path: String = unwrap_or_default_config(generate_params.config_path);
+    let exercises_path = unwrap_or_default_exercises(generate_params.exercises_path);
+    
+
+    // minutes: u16, config_path: ConfigPath, exercise_path: ExercisePath
     //TODO: Set these as function params
     let total_secs = minutes as f32 * 60_f32;
-    let exercises = load_exercises_from_json(exercise_path);
+    let exercises = load_exercises_from_json(exercises_path);
     let exercise_category_map = generate_exercise_categories(&exercises);
     let conf = load_config(config_path);
 
@@ -50,7 +56,7 @@ pub fn generate_workout(minutes: u16, config_path: ConfigPath, exercise_path: Ex
 
 #[test]
 fn test_generate_workout() {
-    let workout = generate_workout(1000, ConfigPath::default(), ExercisePath::default());
+    let workout = generate_workout(GenerateParams {minutes: 1000, config_path: None, exercises_path: None});
 }
 
 fn get_exercise_from_name<'a>(name: &str, exercises: &'a Vec<Exercise>) -> &'a Exercise {
@@ -97,7 +103,7 @@ pub fn fill_category(hcc: &HydratedCategoryConfig) -> Vec<Exercise> {
 
 #[test]
 fn test_fill_category() {
-    let exercises = load_exercises_from_json(Default::default());
+    let exercises = load_exercises_from_json(unwrap_or_default_exercises(None));
     let exercise_category_map = generate_exercise_categories(&exercises);
     let hcc = HydratedCategoryConfig {
         category: &CategoryType::PhysicalTherapy,
@@ -113,7 +119,7 @@ fn test_fill_category() {
 #[test]
 fn test_fill_category_with_include() {
     let category = CategoryType::PhysicalTherapy;
-    let exercises = load_exercises_from_json(Default::default());
+    let exercises = load_exercises_from_json(unwrap_or_default_exercises(None));
     let exercise_category_map = generate_exercise_categories(&exercises);
     let include = vec!["Clamshells", "Butt Kickers"];
     let include_exercises = get_exercises_from_name(&include, &exercises);
@@ -144,7 +150,7 @@ fn test_fill_category_with_include() {
 #[test]
 fn test_fill_category_with_omit() {
     let category = CategoryType::PhysicalTherapy;
-    let exercises = load_exercises_from_json(Default::default());
+    let exercises = load_exercises_from_json(unwrap_or_default_exercises(None));
     let exercise_category_map = generate_exercise_categories(&exercises);
     let omit = vec!["Clamshells", "Butt Kickers"];
     let omit_exercises = get_exercises_from_name(&omit.clone(), &exercises);

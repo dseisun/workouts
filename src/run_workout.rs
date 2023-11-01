@@ -2,7 +2,7 @@ use std::time::Duration;
 
 use indicatif::{ProgressBar, ProgressStyle, ProgressIterator};
 use strfmt::strfmt;
-use crate::{models::{Exercise, ConfigPath, ExercisePath, Side, load_exercises_from_json}, generate_workout, tts::{OSXSpeak, Speak, NotImplSpeak}};
+use crate::{models::{Exercise, ConfigPath, Side, load_exercises_from_json}, generate_workout, tts::{OSXSpeak, Speak, NotImplSpeak}, args::{GenerateParams, unwrap_or_default_exercises}};
 
 
 
@@ -26,7 +26,7 @@ pub fn run_workout(workout: Vec<Exercise>) {
 // TODO set the tests up properly so rust doesn't think my imports above are unused
 #[test]
 fn test_running_workout() {
-    let workout = generate_workout(1, ConfigPath::default(), ExercisePath::default());
+    let workout = generate_workout(GenerateParams{minutes: 1, config_path: None, exercises_path: None});
     run_workout(workout)
 }
 
@@ -66,6 +66,6 @@ fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
 
 #[test]
 fn test_running_exercise() {
-    let exc = load_exercises_from_json(ExercisePath::default());
+    let exc = load_exercises_from_json(unwrap_or_default_exercises(None));
     run_exercise(exc.first().unwrap(), &crate::tts::get_speaker())
 }
