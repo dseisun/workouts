@@ -14,7 +14,14 @@ fn sleep(_dur: Duration) {}
 
 
 pub fn run_workout(workout: Vec<Exercise>) {
-    
+    // Display the workout before starting
+    let mut workout_length = 0.0;
+    for (i, e) in workout.iter().enumerate() {
+        workout_length += e.total_time() as f64;
+        println!("{}: {}", i+1, e.name)
+    }
+    println!("Workout should take: {} minutes \n\n", workout_length / 60.0);
+
     let tts = crate::tts::get_speaker();
 
     for exercise in workout {
@@ -43,7 +50,7 @@ fn run_exercise(exercise: &Exercise, speaker: &Box<dyn Speak>) {
         let message = strfmt!(&unformatted_message, side => side.to_string(), name => exercise.name.clone()).unwrap();
         
         let tick = Duration::from_secs(1);
-        
+
         println!("{}", message);
         println!("{}", exercise.long_desc);
         speaker.tts(&message);

@@ -15,10 +15,7 @@ pub fn generate_workout(generate_params: GenerateParams) -> Vec<Exercise> {
     let minutes = generate_params.minutes;
     let config_path: String = unwrap_or_default_config(generate_params.config_path);
     let exercises_path = unwrap_or_default_exercises(generate_params.exercises_path);
-    
 
-    // minutes: u16, config_path: ConfigPath, exercise_path: ExercisePath
-    //TODO: Set these as function params
     let total_secs = minutes as f32 * 60_f32;
     let exercises = load_exercises_from_json(exercises_path);
     let exercise_category_map = generate_exercise_categories(&exercises);

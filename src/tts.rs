@@ -1,4 +1,4 @@
-use std::{process::{Command, Output}, io::{self, Write}, thread, time::Duration, fmt::format};
+use std::{process::{Command, Output}, io::{self, Write}};
 //Os specific trait
 pub(crate) trait Speak {
     //Implement this method however you want text to speech to work on a given operating system
@@ -35,7 +35,6 @@ impl Speak for TestSpeak {
     }
 }
 
-//TODO Write tests
 #[cfg(test)]
 pub(crate) fn get_speaker() -> Box<dyn Speak> {
     Box::new(TestSpeak)

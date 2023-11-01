@@ -32,7 +32,8 @@ fn main() {
         },
     };
 
-    println!("{:?}", workout); //TODO Either prettify this or make it a debug logline
+    // Show how long the workout should take
+    // Show the workouts
     run_workout::run_workout(workout);
     let workout_duration = SystemTime::now().duration_since(start).unwrap();
     println!("Workout took: {:?}", workout_duration)
