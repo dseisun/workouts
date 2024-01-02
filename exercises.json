@@ -56,8 +56,28 @@
     "side": "Null",
     "default_time": 30,
     "repetition": 3,
-    "prompt": "10 {name}",
+    "prompt": "10 {name}. Do kegals as you lift",
     "long_desc": "Can be done just standing, but is better with an edge to keep only your toes on, like stairs"
+  },
+  {
+    "date_added": "2023-12-06 00:00:00",
+    "name": "Cobra pose",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 20,
+    "repetition": 3,
+    "prompt": "{name}.",
+    "long_desc": "Lay face down and lift your head up as much as possible. Let your hands float"
+  },
+  {
+    "date_added": "2023-12-06 00:00:00",
+    "name": "Jump rope",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 1,
+    "prompt": "{name}.",
+    "long_desc": "Either with an actual rope or simulated rope"
   },
   {
     "date_added": "2017-01-12 19:34:08",
@@ -503,11 +523,11 @@
     "date_added": "2019-12-27 00:00:00",
     "name": "Hip mobility",
     "category_id": "stretch",
-    "side": "Both",
+    "side": "Null",
     "default_time": 60,
     "repetition": 2,
     "prompt": "{name}. Bend {side} side in. ",
-    "long_desc": ""
+    "long_desc": "Sit upright with your legs apart and knees bent at 90 degrees. Bend one knee in until you feel a stretch"
   },
   {
     "date_added": "2019-12-27 00:00:00",
@@ -588,5 +608,25 @@
     "repetition": 2,
     "prompt": "{name}. 2 reps",
     "long_desc": "Roll out the ladder and run 1-2 patterns on it"
+  },
+  {
+    "date_added": "2023-11-13 00:00:00",
+    "name": "Jumping jacks",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 60,
+    "repetition": 1,
+    "prompt": "{name}",
+    "long_desc": ""
+  },
+  {
+    "date_added": "2023-11-19 19:34:08",
+    "name": "Roller on the it band",
+    "category_id": "rolling",
+    "side": "Both",
+    "default_time": 35,
+    "repetition": 1,
+    "prompt": "{name}. {side} side.",
+    "long_desc": ""
   }
 ]

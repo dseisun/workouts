@@ -55,6 +55,17 @@
         },
         
         {
+            "date_added": "2017-01-12 19:34:08",
+            "name": "Curls",
+            "category_id": "strength",
+            "side": "Null",
+            "default_time": 60,
+            "repetition": 3,
+            "prompt": "{name}",
+            "long_desc": "Normal bicep curls"
+          },
+
+        {
         "date_added": "2023-10-26 11:30:00",
         "name": "Modified Jumping Jacks",
         "category_id": "stretch",
@@ -64,6 +75,17 @@
         "prompt": "{name}",
         "long_desc": "Start with feet together. Step one foot out to the side and raise arms overhead. Step foot back in and lower arms. Repeat on the other side."
         },
+
+        {
+            "date_added": "2017-01-12 19:34:08",
+            "name": "Band Walk",
+            "category_id": "physical_therapy",
+            "side": "Null",
+            "default_time": 80,
+            "repetition": 1,
+            "prompt": "{name}",
+            "long_desc": "Side to side shuffle with a band around your knees"
+          },
         
         {
         "date_added": "2023-10-26 11:35:00",
