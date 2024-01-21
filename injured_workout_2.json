@@ -141,6 +141,15 @@
     "repetition": 1,
     "prompt": "{name}",
     "long_desc": "5 seconds downward dog to yoga push up pose"
+  },
+  {
+    "date_added": "2023-12-06 00:00:00",
+    "name": "Jump rope",
+    "category_id": "strength",
+    "side": "Null",
+    "default_time": 310,
+    "repetition": 1,
+    "prompt": "{name}.",
+    "long_desc": "Either with an actual rope or simulated rope"
   }
-
 ]    

@@ -184,7 +184,7 @@
     "name": "Side Plank",
     "category_id": "strength",
     "side": "Both",
-    "default_time": 55,
+    "default_time": 65,
     "repetition": 1,
     "prompt": "{name}. {side} side. 50 seconds",
     "long_desc": "Plank on elbows or arms"

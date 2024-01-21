@@ -1,4 +1,5 @@
 // TODO: Overall progress bar / timer
+// TODO: Keypress to skip exercise (useful for biking or jumping rope where you background the app)
 
 // Use builder pattern for your workout obj: https://doc.rust-lang.org/1.0.0/style/ownership/builders.html
 // Or use default struct pattern

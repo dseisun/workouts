@@ -132,6 +132,16 @@
             "long_desc": ""
           },
           {
+            "date_added": "2017-01-12 19:34:08",
+            "name": "Side Plank",
+            "category_id": "strength",
+            "side": "Both",
+            "default_time": 65,
+            "repetition": 1,
+            "prompt": "{name}. {side} side. 50 seconds",
+            "long_desc": "Plank on elbows or arms"
+          },
+          {
             "date_added": "2023-12-06 00:00:00",
             "name": "Jump rope",
             "category_id": "strength",
